@@ -23,17 +23,25 @@ namespace Tarea01
             var adivinanza = 500;
             var limite = adivinanza + 2;
             lbldetalle.Text = "Digite un numero entre: " + adivinanza.ToString() + "y " + limite.ToString();
-            if (txtnumero.Text != "")
+            if (txtnumero.Text !="")
             {
-                if (txtnumero.Text == adivinanza.ToString())
+                if (Int32.Parse(txtnumero.Text) < limite)
                 {
-                    lblmensaerror.Text = "¡Éxito!";
-                    lblmensaerror.TextColor = Color.BlueViolet;
+                    if (txtnumero.Text == adivinanza.ToString())
+                    {
+                        lblmensaerror.Text = "¡Éxito, adivinaste!";
+                        lblmensaerror.TextColor = Color.BlueViolet;
+                    }
+                    else
+                    {
+                        lblmensaerror.Text = "Será para la Próxima, siga bateando...";
+                        lblmensaerror.TextColor = Color.ForestGreen;
+                    }
                 }
                 else
                 {
-                    lblmensaerror.Text = "Será para la Próxima, siga bateando...";
-                    lblmensaerror.TextColor = Color.ForestGreen;
+                    lblmensaerror.Text = "No puede Digitar un valor mayor al detallado...:"+ limite.ToString();
+                    lblmensaerror.TextColor = Color.Red;
                 }
             }
             else
