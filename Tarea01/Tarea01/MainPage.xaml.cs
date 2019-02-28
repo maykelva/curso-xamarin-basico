@@ -27,7 +27,7 @@ namespace Tarea01
             {
                 if (Int32.Parse(txtnumero.Text) < limite)
                 {
-                    if (Int32.Parse(txtnumero.Text) > adivinanza)
+                    if (Int32.Parse(txtnumero.Text) >= adivinanza)
                     {
                         if (txtnumero.Text == adivinanza.ToString())
                         {
@@ -42,13 +42,13 @@ namespace Tarea01
                     }
                     else
                     {
-                        lblmensaerror.Text = "No puede Digitar un valor menor al detallado...:" + adivinanza.ToString();
+                        lblmensaerror.Text = "No puede Digitar un valor MENOR al detallado...:" + adivinanza.ToString();
                         lblmensaerror.TextColor = Color.Red;
                     }
                 }
                 else
                 {
-                    lblmensaerror.Text = "No puede Digitar un valor mayor al detallado...:"+ limite.ToString();
+                    lblmensaerror.Text = "No puede Digitar un valor MAYOR al detallado...:"+ limite.ToString();
                     lblmensaerror.TextColor = Color.Red;
                 }
             }
