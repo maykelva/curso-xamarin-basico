@@ -27,15 +27,23 @@ namespace Tarea01
             {
                 if (Int32.Parse(txtnumero.Text) < limite)
                 {
-                    if (txtnumero.Text == adivinanza.ToString())
+                    if (Int32.Parse(txtnumero.Text) > adivinanza)
                     {
-                        lblmensaerror.Text = "¡Éxito, adivinaste!";
-                        lblmensaerror.TextColor = Color.BlueViolet;
+                        if (txtnumero.Text == adivinanza.ToString())
+                        {
+                            lblmensaerror.Text = "¡Éxito, adivinaste!";
+                            lblmensaerror.TextColor = Color.BlueViolet;
+                        }
+                        else
+                        {
+                            lblmensaerror.Text = "Será para la Próxima, siga bateando...";
+                            lblmensaerror.TextColor = Color.ForestGreen;
+                        }
                     }
                     else
                     {
-                        lblmensaerror.Text = "Será para la Próxima, siga bateando...";
-                        lblmensaerror.TextColor = Color.ForestGreen;
+                        lblmensaerror.Text = "No puede Digitar un valor menor al detallado...:" + adivinanza.ToString();
+                        lblmensaerror.TextColor = Color.Red;
                     }
                 }
                 else
