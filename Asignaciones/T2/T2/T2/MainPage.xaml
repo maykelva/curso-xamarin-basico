@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:T2"
+             x:Class="T2.MainPage">
+    <ScrollView>
+        <StackLayout x:Name="Stack1" BackgroundColor="DarkViolet">
+            <Picker x:Name="PickerPantalla" TextColor="LightYellow" Title="Registro de Visitantes_Página Principal">
+            </Picker>
+            <!-- Controles hijos van aca -->
+            <Label x:Name="lblnombre" FontSize="12" TextColor="LightYellow" Text="Digite su Nombre:" HorizontalOptions="Center"  VerticalOptions="Start" />
+            <Entry x:Name="txtnombre" MaxLength="15" TextColor ="LightYellow" Keyboard ="Text" Placeholder="Solo Letras / Digite Aquí"/>
+            <Picker x:Name="PickerMotivo" TextColor="LightYellow" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Title="Seleccione Motivo de Visita / De un Click Aquí">
+                <Picker.Items>
+                    <x:String>Consulta</x:String>
+                    <x:String>Reunión</x:String>
+                    <x:String>Implementación</x:String>
+                    <x:String>Soporte</x:String>
+                </Picker.Items>
+            </Picker>
+            <Label x:Name="lblfecha" FontSize="12" TextColor="LightYellow" Text="Seleccione Fecha de la Visita:" HorizontalOptions="Center"  VerticalOptions="Start" />
+            <DatePicker x:Name="picfecha" Format="dd-MM-yyyy" TextColor="LightYellow"/>
+            <Label x:Name="lblcedula" FontSize="12" TextColor="LightYellow" Text="Digite su Número de Cédula:" HorizontalOptions="Center"  VerticalOptions="Start" />
+            <Entry x:Name="txtcedula" Keyboard ="Numeric" TextColor ="LightYellow" Placeholder="Sólo Números / Digite Aquí"/>
+            <Label x:Name="lbltelefono" FontSize="12" TextColor="LightYellow" Text="Digite Teléfono / Celular:" HorizontalOptions="Center"  VerticalOptions="Start" />
+            <Entry x:Name="txttelefono" Keyboard ="Telephone" TextColor ="LightYellow"  Placeholder="Sólo Números / Digite Aquí"/>
+            <Button x:Name="btnaplicar" Text="Guardar"  BorderColor="Yellow" />
+            <Button x:Name="btnconsultar" Text="Consultar" BorderColor="Yellow" />
+            <Button x:Name="btneliminar" Text="Eliminar" BorderColor="Yellow" />
+            <Label x:Name="lblmensaje" FontSize="15" TextColor="Yellow" Text="" HorizontalOptions="Center"  VerticalOptions="Start" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
